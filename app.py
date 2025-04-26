@@ -1,9 +1,13 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, redirect
 
 app = Flask(__name__)
 
 # In-memory storage for todos
 todos = []
+
+@app.route('/')
+def home():
+    return redirect('https://github.com/dantefasano/python-todo-list-API#readme')
 
 @app.route('/todos', methods=['GET'])
 def get_todos():

@@ -1,4 +1,3 @@
-
 # configuration and readme
 !.gitignore
 !.devcontainer
@@ -27,3 +26,36 @@
 conftest.py
 __pycache__/
 .pytest_cache/
+
+# IDE specific files
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+.env.local
+.env.*.local
+venv/
+ENV/
+
+# Logs and databases
+*.log
+*.sqlite
+*.db
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.coverage
+.coverage.*
+.cache
+coverage.xml
+*.cover
