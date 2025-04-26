@@ -141,10 +141,14 @@ All successful responses return a JSON array of todo objects:
 
 ## Testing the API
 
-You can test the API using several methods:
+> ⚠️ **Important**: You must test the API from your local machine's browser, not from GitHub's website. GitHub's Content Security Policy prevents making requests to localhost.
 
-### 1. Browser Console
-Open your browser's developer tools (F12) and use these commands:
+### 1. Browser Console (Recommended)
+1. Make sure your Flask server is running (`python app.py`)
+2. Open your local browser and go to http://127.0.0.1:5000
+3. Open the browser's developer tools (F12 or right-click -> Inspect)
+4. Go to the Console tab
+5. Use these commands:
 
 ```javascript
 // Get all todos

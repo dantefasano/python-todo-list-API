@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, redirect
+from flask import Flask, request, jsonify
 
 app = Flask(__name__)
 
@@ -7,7 +7,19 @@ todos = []
 
 @app.route('/')
 def home():
-    return redirect('https://github.com/dantefasano/python-todo-list-API#readme')
+    return jsonify({
+        "message": "Welcome to the Todo List API",
+        "endpoints": {
+            "GET /todos": "Get all todos",
+            "POST /todos": "Create a new todo with {label: string, done: boolean}",
+            "DELETE /todos/<position>": "Delete todo at the specified position"
+        },
+        "example_post_body": {
+            "label": "Buy groceries",
+            "done": False
+        },
+        "note": "Please test the API from your local machine's browser console, not from GitHub's website"
+    })
 
 @app.route('/todos', methods=['GET'])
 def get_todos():
